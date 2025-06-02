@@ -12,3 +12,7 @@ def get_weather(city, api_key):
     else:
         return "Error fetching weather data."
 
+        if __name__ == "__main__":
+            city = input("Enter city name: ")
+            api_key = input("Enter your OpenWeatherMap API key: ")
+            print(get_weather(city, api_key))
