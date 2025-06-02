@@ -8,7 +8,11 @@ def calculate_sum(arr):
 def get_integer(prompt):
     while True:
         try:
-            return int(input(prompt))
+            value = input(prompt)
+            if value.strip() == "":
+                print("Input cannot be empty. Please enter a valid integer.")
+                continue
+            return int(value)
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
